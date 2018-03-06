@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evolve - Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/master.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body id="login-body">
+
+<div id="login-container">
+
+    <div id="login-header"><h3>Evolve</h3></div>
+    <form action="/login" method="post">
+
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fas fa-user"></i></span>
+            <input type="text" name="username" class="form-control" placeholder="Email Address">
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fas fa-lock"></i></span>
+            <input type="password" name="password" class="form-control" placeholder="Password">
+        </div>
+
+        <div class="input-group">
+            <button class="btn btn-info btn-block" type="submit" id="login-submit">Login</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

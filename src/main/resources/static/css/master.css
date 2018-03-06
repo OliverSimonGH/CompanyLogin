@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #DADADA !important;
+}
+
+#login-container{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: 230px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    padding: 0 20px 20px 20px;
+}
+
+#login-header{
+    text-align: center;
+}
+
+.input-group span {
+    height: 100%;
+}
+
+#login-container .input-group {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#login-submit{
+    height: 35px;
+}
+
+

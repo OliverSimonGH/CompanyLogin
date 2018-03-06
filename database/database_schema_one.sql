@@ -211,6 +211,38 @@ CREATE TABLE IF NOT EXISTS `evolved`.`result` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `evolved`.`role`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `evolved`.`role` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `role` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `evolved`.`account_role`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `evolved`.`account_role` (
+  `fk_account` INT NOT NULL,
+  `fk_role` INT NOT NULL,
+  PRIMARY KEY (`fk_account`, `fk_role`),
+  INDEX `fk_account_has_role_role1_idx` (`fk_role` ASC),
+  INDEX `fk_account_has_role_account1_idx` (`fk_account` ASC),
+  CONSTRAINT `fk_account_has_role_account1`
+    FOREIGN KEY (`fk_account`)
+    REFERENCES `evolved`.`account` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_account_has_role_role1`
+    FOREIGN KEY (`fk_role`)
+    REFERENCES `evolved`.`role` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
